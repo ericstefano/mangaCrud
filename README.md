@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to mangaCrud 👋</h1>
+<h1 align="center">mangaCrud 🈸️</h1>
 <p>
   <a href="https://github.com/ericstefano/mangaCrud/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/ericstefano/mangaCrud" />
@@ -10,17 +10,20 @@
 ## Install
 
 ```sh
-(npm install)
+npm install
 ```
 
 ## Usage
 
+On one terminal, run:
 ```sh
-(npm run json-server)
+npm run json-server
 ```
+Then, open another terminal and run:
 ```sh
-(npm run dev)
+npm run dev
 ```
+Finally, open [localhost:1234](localhost:1234) on your browser.
 
 ## Author
 
