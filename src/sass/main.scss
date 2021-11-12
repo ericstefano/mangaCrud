@@ -1,0 +1,82 @@
+$fa-font-path: '../../node_modules/@fortawesome/fontawesome-free/webfonts';
+@import '../../node_modules/bulma/bulma.sass';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+
+.main {
+  min-height: 100vh;
+}
+
+.border-top {
+  border-top: 1px solid #dbdbdb;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+th,
+td {
+  vertical-align: middle !important;
+}
+
+.gap {
+  gap: 5px;
+}
+
+.notifications {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  margin-top: calc(-87vh / 2);
+  margin-left: calc(-40% / 2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.notification {
+  animation: notifyStart 0.3s ease-in forwards,
+    notifyFinish 0.3s 2.4s ease-out forwards;
+}
+
+@keyframes notifyStart {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes notifyFinish {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .notifications {
+    width: 90%;
+    margin-left: calc(-90% / 2);
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "mangacrud",
+  "version": "1.0.0",
+  "description": "Keep track of mangas/manhwas that you are reading.",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "prod": "parcel build ./src/index.html --public-url ./",
+    "json-server": "json-server ./src/data/obra.json --id nome"
+  },
+  "author": "Eric Stefano",
+  "license": "MIT",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@parcel/transformer-sass": "^2.0.1",
+    "axios": "^0.24.0",
+    "bulma": "^0.9.3",
+    "eslint": "^8.1.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "json-server": "^0.17.0",
+    "parcel": "^2.0.1",
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "n": "^8.0.0"
+  }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Rastreador de mangas/manhwas" />
+    <link rel="icon" href="./images/japanese-24153.svg" />
+    <title>Manga Torakkā!</title>
+  </head>
+  <body>
+    <section class="main section has-background-light">
+      <div id="notifications" class="notifications"></div>
+      <div class="block has-text-centered">
+        <h1 class="title is-size-2">Manga トラッカー!</h1>
+        <p class="subtitle">
+          Não esqueça em qual capítulo parou, adicione suas obras prediletas!
+        </p>
+      </div>
+      <div class="container">
+        <div class="columns is-centered">
+          <form id="form" action="#" class="column is-half is-centered">
+            <div class="border-top field pt-3">
+              <label class="label">Nome do mangá / manhwa:</label>
+              <div class="control has-icons-left has-icons-right">
+                <input
+                  name="nome"
+                  id="nome"
+                  class="input"
+                  type="text"
+                  placeholder="Fullmetal Alchemist"
+                  required
+                />
+                <span class="icon is-small is-left">
+                  <i class="fas fa-book-open"></i>
+                </span>
+                <span class="icon is-small is-right is-hidden">
+                  <i class="fas fa-check"></i>
+                </span>
+              </div>
+              <p class="help is-hidden"></p>
+            </div>
+
+            <div class="field">
+              <label class="label">Último capítulo lido:</label>
+              <div class="control has-icons-left has-icons-right">
+                <input
+                  name="ultimo"
+                  id="ultimo"
+                  class="input"
+                  type="number"
+                  min="0"
+                  step="0.1"
+                  placeholder="63"
+                  required
+                />
+                <span class="icon is-small is-left">
+                  <i class="fas fa-bookmark"></i>
+                </span>
+                <span class="icon is-small is-right is-hidden">
+                  <i class="fas fa-check"></i>
+                </span>
+              </div>
+              <p class="help is-success"></p>
+            </div>
+
+            <div class="field">
+              <label class="label">Quantidade de capítulos:</label>
+              <div class="control has-icons-left has-icons-right">
+                <input
+                  name="total"
+                  id="total"
+                  class="input"
+                  type="number"
+                  min="0"
+                  placeholder="108"
+                  required
+                />
+                <span class="icon is-small is-left">
+                  <i class="fas fa-list-alt"></i>
+                </span>
+                <span class="icon is-small is-right is-hidden">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </span>
+              </div>
+              <p class="help is-hidden"></p>
+            </div>
+            <div class="columns is-centered">
+              <div class="column is-4">
+                <button id="submit" class="button is-primary is-fullwidth">
+                  <span class="icon is-small">
+                    <i class="fas fa-plus"></i>
+                  </span>
+                  <span> Adicionar </span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <table
+          class="
+            table
+            is-bordered is-striped is-fullwidth is-narrow is-hoverable
+            has-text-centered
+          "
+        >
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Último capítulo lido</th>
+              <th>Quantidade de capítulos</th>
+              <th>Opções</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <form></form>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>
