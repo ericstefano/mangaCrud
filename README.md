@@ -35,11 +35,7 @@ npm run live-server
 
 This should open [localhost:1234](http:localhost:1234) on your browser.
 
-⚠️ ⚠️ ⚠️
-
-Don't use VSCode LiveServer Extension, see more [here](https://github.com/typicode/json-server/issues/1106)
-
-⚠️ ⚠️ ⚠️
+⚠️ **Don't use VSCode LiveServer Extension, see why [here](https://github.com/typicode/json-server/issues/1106)** ⚠️
 
 ## Author
 
