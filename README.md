@@ -1,4 +1,4 @@
-<h1 align="center">mangaCrud 🈸️</h1>
+<h1 align="center">🈸️ mangaCrud</h1>
 <p>
   <a href="https://github.com/ericstefano/mangaCrud/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/ericstefano/mangaCrud" />
@@ -35,6 +35,13 @@ Finally, open [localhost:1234](http:localhost:1234) on your browser.
 
 - Github: [@ericstefano](https://github.com/ericstefano)
 - LinkedIn: [@ericstefano](https://linkedin.com/in/ericstefano)
+
+## Technologies
+
+- CSS Framework: [Bulma](https://bulma.io/)
+- REST API Mock: [JSON Server](https://www.npmjs.com/package/json-server)
+- Module Bundler: [Parcel](https://parceljs.org/)
+- Icons: [FontAwesome](https://fontawesome.com/)
 
 ## 📝 License
 
