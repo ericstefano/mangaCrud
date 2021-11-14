@@ -21,7 +21,7 @@ class Database {
    * @param {Obra} obra
    */
   static async post(link, obra) {
-    await fetch(link, {
+    const req = await fetch(link, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -29,6 +29,9 @@ class Database {
       },
       body: JSON.stringify(obra),
     });
+    if (!req.ok) {
+      throw new Error(`${req.status}: ${req.statusText}`);
+    }
   }
 
   /**
@@ -38,6 +41,9 @@ class Database {
    */
   static async get(link) {
     const req = await fetch(link);
+    if (!req.ok) {
+      throw new Error(`${req.status}: ${req.statusText}`);
+    }
     return req;
   }
 
@@ -338,7 +344,6 @@ class UI {
       },
       'salvar'
     );
-
     btnGroup.appendChild(btnCancel);
     btnGroup.appendChild(btnSave);
   }
@@ -440,10 +445,13 @@ const notifications = document.getElementById('notifications');
 const tableBody = document.getElementById('tableBody');
 const mockDB = 'http://localhost:3000/obras';
 
-UI.displayObras(tableBody, mockDB);
+UI.displayObras(tableBody, mockDB).catch((err) => {
+  UI.notify(notifications, err, 'is-danger', 'fa-times', 3000);
+});
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+  nome.focus();
 
   if (
     Validate.fieldTypeText(nome) &&
@@ -472,16 +480,21 @@ form.addEventListener('submit', (e) => {
       UI.editRow(button, mockDB);
     };
 
-    UI.createRow(tableBody, obra, del, edi);
-    Database.post(mockDB, obra);
-    UI.notify(
-      notifications,
-      'Obra adicionada com sucesso!',
-      'is-success',
-      'fa-check',
-      3000
-    );
-    UI.clearFields([nome, ultimo, total]);
+    Database.post(mockDB, obra)
+      .then(() => {
+        UI.createRow(tableBody, obra, del, edi);
+        UI.notify(
+          notifications,
+          'Obra adicionada com sucesso!',
+          'is-success',
+          'fa-check',
+          3000
+        );
+        UI.clearFields([nome, ultimo, total]);
+      })
+      .catch((err) => {
+        UI.notify(notifications, err, 'is-danger', 'fa-times', 3000);
+      });
   }
 });
 
