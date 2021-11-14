@@ -53,7 +53,7 @@ class Database {
    * @param {Obra} obra
    */
   static async put(link, obra) {
-    await fetch(`${link}/${obra.nome}`, {
+    await fetch(`${link}/${encodeURIComponent(obra.nome)}`, {
       method: 'PUT',
       headers: {
         Accept: 'application/json',
@@ -70,7 +70,7 @@ class Database {
    */
 
   static async delete(link, obra) {
-    await fetch(`${link}/${obra.nome}`, {
+    await fetch(`${link}/${encodeURIComponent(obra.nome)}`, {
       method: 'DELETE',
     });
   }
