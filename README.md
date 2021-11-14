@@ -16,21 +16,25 @@ npm install
 ## Usage
 
 On one terminal, run:
+
 ```sh
 npm run json-server
 ```
+
 Then, open another terminal and run:
+
 ```sh
 npm run dev
 ```
-Finally, open [localhost:1234](localhost:1234) on your browser.
+
+Finally, open [localhost:1234](http:localhost:1234) on your browser.
 
 ## Author
 
 👤 **Eric Stefano**
 
-* Github: [@ericstefano](https://github.com/ericstefano)
-* LinkedIn: [@ericstefano](https://linkedin.com/in/ericstefano)
+- Github: [@ericstefano](https://github.com/ericstefano)
+- LinkedIn: [@ericstefano](https://linkedin.com/in/ericstefano)
 
 ## 📝 License
 
