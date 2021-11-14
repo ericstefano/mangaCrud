@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Keep track of mangas/manhwas that you are reading.",
   "scripts": {
-    "dev": "parcel ./src/index.html",
+    "dev": "parcel ./src/index.html --open",
     "prod": "parcel build ./src/index.html --public-url ./",
-    "json-server": "json-server ./src/data/obra.json --id nome"
+    "json-server": "json-server ./src/data/obra.json --id nome",
+    "live-server": "live-server dist/ --port=1234"
   },
   "author": "Eric Stefano",
   "license": "MIT",
@@ -18,13 +19,13 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "json-server": "^0.17.0",
+    "live-server": "^1.2.1",
     "parcel": "^2.0.1",
     "prettier": "^2.4.1"
   },
   "dependencies": {
     "n": "^8.0.0"
   },
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ericstefano/mangaCrud.git"

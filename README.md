@@ -15,19 +15,31 @@ npm install
 
 ## Usage
 
-On one terminal, run:
+Run:
+
+```sh
+npm run prod
+```
+
+On another terminal, run:
 
 ```sh
 npm run json-server
 ```
 
-Then, open another terminal and run:
+Finally, open another terminal and run:
 
 ```sh
-npm run dev
+npm run live-server
 ```
 
-Finally, open [localhost:1234](http:localhost:1234) on your browser.
+This should open [localhost:1234](http:localhost:1234) on your browser.
+
+⚠️ ⚠️ ⚠️
+
+Don't use VSCode LiveServer Extension, see more [here](https://github.com/typicode/json-server/issues/1106)
+
+⚠️ ⚠️ ⚠️
 
 ## Author
 
